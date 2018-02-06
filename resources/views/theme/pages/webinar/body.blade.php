@@ -1,6 +1,6 @@
 <div class="wrapper" style="padding:0px;overflow: hidden;">
-    <div class="page-header page-header-small" style="display: block;height:440px !important;">
-        <div id="header-image" class="page-header-image " style="float:left; background-size: cover !important; background-position: bottom !important;background-color:#000;background:url({{$page->content()->heading->background}});">
+    <div class="page-header page-header-small" style="display: block;height:440px !important;background-color:#000;">
+        <div id="header-image" class="page-header-image " style="float:left; background-size: cover !important; background-color:#000;background:url({{$page->content()->heading->background}});opacity:0.5;">
         </div>
         <div class="container">
             <div class="content-center" style="padding:15px;">
