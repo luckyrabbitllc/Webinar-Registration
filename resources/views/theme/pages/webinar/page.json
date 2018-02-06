@@ -29,153 +29,22 @@
         }
       }
     },
-    "features": {
-      "title": "Features",
-      "slug": "features",
+    "content": {
+      "title": "Content",
+      "slug": "content",
       "fields": {
-        "image": {
-          "type": "text",
-          "slug": "image",
-          "description": "Url for a featured image (optional).",
-          "placeholder": "http://www.example.com"
-        },
-        "headline": {
-          "type": "text",
-          "slug": "headline",
-          "description": "A short summary of the feature's benefit.",
-          "placeholder": "Write a headline."
-        },
-        "feature_1_title": {
-          "type": "textarea",
-          "slug": "feature_1_title",
-          "description": "One or two lines about the benefit.",
-          "placeholder": "Write a message."
-        },
-        "feature_1_message": {
-          "type": "textarea",
-          "slug": "feature_1_message",
-          "description": "One or two lines about the benefit.",
-          "placeholder": "Write a message."
-        },
-        "feature_1_image": {
-          "type": "text",
-          "slug": "feature_1_image",
-          "description": "A relevant image.",
-          "placeholder": "http://..."
-        },
-        "feature_2_title": {
-          "type": "textarea",
-          "slug": "feature_2_title",
-          "description": "One or two lines about the benefit.",
-          "placeholder": "Write a message."
-        },
-        "feature_2_message": {
-          "type": "textarea",
-          "slug": "feature_2_message",
-          "description": "One or two lines about the benefit.",
-          "placeholder": "Write a message."
-        },
-        "feature_2_image": {
-          "type": "text",
-          "slug": "feature_2_image",
-          "description": "A relevant image.",
-          "placeholder": "http://..."
-        },
-        "feature_3_title": {
-          "type": "textarea",
-          "slug": "feature_3_title",
-          "description": "One or two lines about the benefit.",
-          "placeholder": "Write a message."
-        },
-        "feature_3_message": {
-          "type": "textarea",
-          "slug": "feature_3_message",
-          "description": "One or two lines about the benefit.",
-          "placeholder": "Write a message."
-        },
-        "feature_3_image": {
-          "type": "text",
-          "slug": "feature_3_image",
-          "description": "A relevant image.",
-          "placeholder": "http://..."
-        }
-      }
-    },
-    "callout": {
-      "title": "Callout",
-      "slug": "callout",
-      "fields": {
-        "text": {
+        "description": {
           "type": "richtext",
-          "slug": "text",
+          "slug": "description",
           "description": "A short call to action message.",
           "placeholder": "Write some text."
-        }
-      }
-    },
-    "pricing": {
-      "title": "Pricing",
-      "slug": "pricing",
-      "fields": {
-        "headline": {
-          "type": "text",
-          "slug": "headline",
-          "description": "A short summary of the feature's benefit.",
-          "placeholder": "Write a headline."
         },
-        "option_1_title": {
-          "type": "richtext",
-          "slug": "option_1_title",
-          "description": "The name of this option.",
-          "placeholder": "Write a message."
-        },
-        "option_1_cost": {
-          "type": "text",
-          "slug": "option_1_cost",
-          "description": "Price per month.",
-          "placeholder": "10"
-        },
-        "option_1_description": {
-          "type": "richtext",
-          "slug": "option_1_description",
-          "description": "One or two lines about this option.",
-          "placeholder": "Write a message."
-        },
-        "option_2_title": {
-          "type": "richtext",
-          "slug": "option_2_title",
-          "description": "The name of this option.",
-          "placeholder": "Write a message."
-        },
-        "option_2_cost": {
-          "type": "text",
-          "slug": "option_2_cost",
-          "description": "Price per month.",
-          "placeholder": "100"
-        },
-        "option_2_description": {
-          "type": "richtext",
-          "slug": "option_2_description",
-          "description": "One or two lines about this option.",
-          "placeholder": "Write a message."
-        },
-        "option_3_title": {
-          "type": "richtext",
-          "slug": "option_3_title",
-          "description": "The name of this option.",
-          "placeholder": "Write a message."
-        },
-        "option_3_cost": {
-          "type": "text",
-          "slug": "option_3_cost",
-          "description": "Price per month.",
-          "placeholder": "1,000."
-        },
-        "option_3_description": {
-          "type": "richtext",
-          "slug": "option_3_description",
-          "description": "One or two lines about this option.",
-          "placeholder": "Write a message."
+        "form": {
+          "type": "code",
+          "mode": "html",
+          "slug": "form",
+          "description": "Add HTML to the registration form.",
+          "placeholder": "<input/>..."
         }
       }
     },
