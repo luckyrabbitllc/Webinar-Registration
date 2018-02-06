@@ -6,7 +6,7 @@
   "website": "https://github.com/luckyrabbitllc/Webinar-Registration",
   "documentation": "https://github.com/luckyrabbitllc/Webinar-Registration/readme.md",
   "version": "0.1",
-  "description": "A simple & flexible page for A/B testing webinar landing pages.",
+  "description": "A simple & flexible StartupEngine package for A/B testing webinar registration pages.",
   "image": "https://psychoanalytics.s3-us-west-1.amazonaws.com/pages/products/wDtDs4wlcXUsoRylE1PkinplrNO3PzRM0rWQj6tV.jpeg",
   "dependencies": {
     "modules": {},
