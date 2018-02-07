@@ -255,13 +255,13 @@
 
 
     @media (min-width: 991px) {
-        .page-header .content-center {
-            padding:75px 25px 25px 25px;
+        .page-header .container >.content-center {
+            padding:75px 25px 25px 25px !important;
         }
     }
     @media (max-width: 991px) {
-        .page-header .content-center {
-            padding:100px 25px 25px 25px;
+        .page-header .containe >.content-center {
+            padding:100px 25px 25px 25px !important;
         }
     }
 </style>
