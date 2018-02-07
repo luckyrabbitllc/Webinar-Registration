@@ -252,6 +252,18 @@
         color: #555 !important;
         opacity:0.8 !important;
     }
+
+
+    @media (min-width: 991px) {
+        .page-header .content-center {
+            padding:75px 25px 25px 25px;
+        }
+    }
+    @media (max-width: 991px) {
+        .page-header .content-center {
+            padding:100px 25px 25px 25px;
+        }
+    }
 </style>
 
 <script src="https://unpkg.com/vee-validate@2.0.3/dist/vee-validate.js"></script>
