@@ -5,7 +5,7 @@
              style="float:left; background-size: cover !important; background-color:#000;background:url({{$page->content()->heading->background}});opacity:0.5;z-index:1;">
         </div>
         <div class="container">
-            <div class="content-center" style="padding:25px;">
+            <div class="content-center" style="padding:100px 25px 25px 25px;">
                 <h2 class="title"
                     style="font-weight:600 !important;">{!! $page->markdown($page->content()->heading->headline) !!}</h2>
                 <h4 class="text-center">{!! $page->markdown($page->content()->heading->intro) !!}</h4>
