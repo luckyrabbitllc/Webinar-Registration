@@ -255,12 +255,12 @@
 
 
     @media (min-width: 991px) {
-        .page-header .container >.content-center {
+        #headerText {
             padding:75px 25px 25px 25px !important;
         }
     }
     @media (max-width: 991px) {
-        .page-header .containe >.content-center {
+        #headerText {
             padding:100px 25px 25px 25px !important;
         }
     }
