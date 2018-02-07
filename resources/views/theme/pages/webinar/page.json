@@ -4,6 +4,10 @@
   "version": "0.1",
   "description": "Description goes here.",
   "image": "https://psychoanalytics.s3-us-west-1.amazonaws.com/pages/products/ejinjFr2xPKaq27lB4QCRkDHdw45ayHjYLW4YMgM.jpeg",
+  "settings": {
+    "use_global_header": true,
+    "use_global_menu": false
+  },
   "sections": {
     "heading": {
       "title": "Heading",
@@ -38,6 +42,24 @@
           "slug": "description",
           "description": "A short call to action message.",
           "placeholder": "Write some text."
+        },
+        "topics": {
+          "type": "richtext",
+          "slug": "description",
+          "description": "A list of topics covered.",
+          "placeholder": "Write some text."
+        },
+        "image": {
+          "type": "text",
+          "slug": "image",
+          "description": "URL to a featured image.",
+          "placeholder": "https://..."
+        },
+        "video": {
+          "type": "text",
+          "slug": "video",
+          "description": "URL to a featured video.",
+          "placeholder": "https://..."
         },
         "form": {
           "type": "code",

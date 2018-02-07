@@ -161,6 +161,60 @@
         margin-left:5px !important;
         min-width:100px !important;
     }
+
+
+    #s {
+        border-radius:30px 0px 0px 30px !important;
+    }
+
+    .input-group-append{
+        padding:0px !important;
+        margin:0px !important;
+    }
+
+    .input-group input, .input-group .input-group-append .btn {
+        -webkit-border-radius: 7px;
+        -moz-border-radius: 7px;
+        background:rgba(0,0,0,0.25) !important;
+        border:none !important;
+        color:#fff !important;
+        font-size:16px;
+        font-weight:400 !important;
+    }
+
+    .input-group:hover input,  .input-group:focus input, .input-group:hover .input-group-append .btn, .input-group:focus .input-group-append .btn{
+        background: #fff !important;
+        color:#777 !important;
+    }
+
+    .input-group-append .btn {
+        border-radius: 0px 30px 30px 0px !important;
+        padding:20px 25px;
+        margin:0px;
+    }
+
+    #registerButton {
+        background:#7777dd !important;
+    }
+
+    .input-group:hover #registerButton {
+        background: #50d892 !important;
+        color:#fff !important;
+    }
+
+    #host, #topics, #date {
+        background:#2ca8ff08 !important;
+        box-shadow:none;
+        border:2px solid rgba(44, 168, 255, 0.22);
+    }
+
+    #hostName, #hostTitle{
+        display:inline-block;
+    }
+
+    #hostTitle {
+        color:#2ca8ff;
+    }
 </style>
 
 @if($page->content()->code->css !== null){!! $page->content()->code->css  !!} @endif
