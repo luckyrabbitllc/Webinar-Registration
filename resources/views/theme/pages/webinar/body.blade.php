@@ -9,28 +9,36 @@
                 <h2 class="title"
                     style="font-weight:600 !important;">{!! $page->markdown($page->content()->heading->headline) !!}</h2>
                 <h4 class="text-center">{!! $page->markdown($page->content()->heading->intro) !!}</h4>
+                <div id="emailSuccess" class="form-group" align="center" style="display:none;padding:15px;">
+                    <div class="btn btn-round btn-neutral btn-lg" style="color:#222;box-shadow:0px 3px 3px rgba(0, 0, 0, 0.5);">You're signed up for this webcast. &nbsp;<i style="color:#50d892;" class="fa fa-check"></i></div>
+                </div>
                 <div id="emailForm" class="form-group" align="center" style="padding:15px;">
-
-
                     <div class="column is-12">
-                        <p :class="{ 'control': false }">
-                            <div class="input-group" style="max-width:550px;">
-                                <input class="form-control" id="s" data-vv-delay="500" v-validate="'required|email'" :class="{'input': true, 'is-danger': errors.has('email') }" name="email" type="text" placeholder="Email Address" autocomplete="off">
-                                <div class="input-group-append">
-                                    <button type="submit" class="btn btn-outline-secondary" type="button"
-                                            id="registerButton"><i
-                                                class="fa fa-envelope"></i>&nbsp; <span
-                                                class="hiddenOnDesktop">Sign Up</span><span class="hiddenOnMobile">Request Invitation</span>
-                                    </button>
+                        <form @submit.prevent="submitForm" >
+                            <p :class="{ 'control': false }">
+                                <div class="input-group" style="max-width:550px;">
+                                    <input class="form-control" id="s" data-vv-delay="500" v-validate="'required|email'" :class="{'input': true, 'is-danger': errors.has('email') }" name="email" type="text" placeholder="Email Address" autocomplete="off">
+                                    <div class="input-group-append">
+                                        <button type="submit" class="btn btn-outline-secondary" type="button"
+                                                id="registerButton"><i
+                                                    class="fa fa-envelope"></i>&nbsp; <span
+                                                    class="hiddenOnDesktop">Sign Up</span><span class="hiddenOnMobile">Request Invitation</span>
+                                        </button>
+                                    </div>
                                 </div>
-                            </div>
-                            <span v-show="errors.has('email')" class="help is-danger">@{{ errors.first('email') }}</span>
-                        </p>
+                                <span v-show="errors.has('email')" class="help is-danger" style="display:none;">@{{ errors.first('email') }}</span>
+                            </p>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    @if($page->content() !== null && isset($page->content()->alert) && $page->content()->alert->message !== null)
+        <div id="alert" class="section text-center" style="background:orangered;margin:0px;padding:15px;">
+            <p style="font-size:25px;color:#fff;margin:0px;" id="alertMessage">{!! $page->markdown($page->content()->alert->message) !!}</p>
+        </div>
+    @endif
     <div class="section text-center" style="background:none;padding-bottom:0px;">
         <div class="container">
             <div class="row">
@@ -140,4 +148,40 @@
             </div>
         </section>
     @endif
+</div>
+
+<div id="successModal" class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">You're all set!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    Check your e-mail for instructions.
+                </p>
+                <?php /*
+                    <form>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Recipient:</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="col-form-label">Message:</label>
+                            <textarea class="form-control" id="message-text"></textarea>
+                        </div>
+                    </form>
+                */ ?>
+            </div>
+            <?php /*
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Send message</button>
+                </div>
+            */?>
+        </div>
+    </div>
 </div>

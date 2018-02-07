@@ -133,12 +133,13 @@
         }
     }
 
-    .grow {
+    .vjs-big-play-button, .grow {
         transition: all .15s ease-in-out;
     }
 
-    .grow:hover {
+    .afterglow:hover .vjs-big-play-button, .grow:hover {
         transform: scale(1.06);
+        transition: all .15s ease-in-out;
     }
 
     .card.bg-gradient-purple p {
@@ -263,6 +264,18 @@
         #headerText {
             padding:100px 25px 25px 25px !important;
         }
+    }
+
+    .vjs-poster {
+        opacity:0.5 !important;
+    }
+
+    .afterglow:hover .vjs-poster {
+        opacity:0.6 !important;
+    }
+
+    .btn-success {
+        background:#50d892 !important;
     }
 </style>
 
