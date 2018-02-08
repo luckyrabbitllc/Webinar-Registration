@@ -209,18 +209,10 @@
         margin:0px;
     }
 
-    #registerButton {
-        background:#7777dd !important;
-    }
 
     .input-group {
         box-shadow:0px 3px 3px rgba(0, 0, 0, 0.5);
         border-radius:30px;
-    }
-
-    .input-group:hover #registerButton {
-        background: #50d892 !important;
-        color:#fff !important;
     }
 
     #host, #topics, #date {
@@ -278,14 +270,42 @@
         opacity:0.6 !important;
     }
 
-    .btn-success {
-        background:#50d892 !important;
-    }
-
     span.help {
         background: rgba(0,0,0,0.5);
         padding: 5px 10px;
         border-radius: 5px;
+    }
+
+    #registerButton{
+        transition: all 0.25s !important;
+    }
+
+    .input-group-valid.is-success.is-untouched #registerButton,
+    #registerButton {
+        background:#7777dd !important;
+        color:#fff !important;
+    }
+
+
+    .input-group-valid.is-touched:not(.is-untouched) #registerButton {
+        background:#7777dd !important;
+        color:#fff !important;
+    }
+
+    .input-group-valid.is-success #registerButton {
+        background:#50d892 !important;
+        color:#fff !important;
+    }
+
+    .input-group.is-danger #registerButton {
+        background: #d84643 !important;
+        color:#fff !important;
+    }
+
+    .input-group-valid.is-success.is-touched.is-untouched, #registerButton,
+    .input-group-valid.is-success.is-touched #registerButton{
+        background:#50d892 !important;
+        color:#fff !important;
     }
 </style>
 

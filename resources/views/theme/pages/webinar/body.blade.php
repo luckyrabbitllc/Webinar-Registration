@@ -15,19 +15,18 @@
                 <div id="emailForm" class="form-group" align="center" style="padding:15px;">
                     <div class="column is-12">
                         <form @submit.prevent="submitForm" >
-                            <p :class="{ 'control': false }">
-                                <div class="input-group" style="max-width:550px;">
-                                    <input class="form-control" id="s" data-vv-delay="500" v-validate="'required|email'" :class="{'input': true, 'is-danger': errors.has('email') }" name="email" type="text" placeholder="Email Address" autocomplete="off">
-                                    <div class="input-group-append">
-                                        <button type="submit" class="btn btn-outline-secondary" type="button"
-                                                id="registerButton"><i
-                                                    class="fa fa-envelope"></i>&nbsp; <span
-                                                    class="hiddenOnDesktop">Sign Up</span><span class="hiddenOnMobile">Request Invitation</span>
-                                        </button>
-                                    </div>
+                            <div class="input-group" style="max-width:550px;" :class="{'input-group-valid': true, 'is-danger': errors.has('email'), 'is-success': errors.has('email') == false, 'is-touched': fields.email && fields.email.touched, 'is-untouched': fields.email !== null}">
+                                <input class="form-control" id="s" data-vv-delay="200" v-validate="'required|email'" :class="{'input': true, 'is-danger': errors.has('email') }" name="email" type="text" placeholder="Email Address" autocomplete="off">
+                                <div class="input-group-append">
+                                    <button type="submit" class="btn btn-outline-secondary" type="button"
+                                            id="registerButton"><i
+                                                class="fa fa-envelope"></i>&nbsp; <span
+                                                class="hiddenOnDesktop">Sign Up</span><span class="hiddenOnMobile">Request Invitation</span>
+                                    </button>
                                 </div>
-                                <span v-show="errors.has('email')" class="help is-danger" style="display:none;">@{{ errors.first('email') }}</span>
-                            </p>
+                            </div>
+                            <span v-show="errors.has('email')" class="help is-danger" style="display:none;">@{{ errors.first('email') }}</span>
+
                         </form>
                     </div>
                 </div>
