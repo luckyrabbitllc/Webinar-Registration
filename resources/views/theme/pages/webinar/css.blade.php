@@ -318,16 +318,6 @@
         text-align: center !important;
     }
 
-    @media (max-width: 991px) {
-        .navbar-transparent:not(.navbar-white) .navbar-brand {
-            top: -10px !important;
-        }
-
-        .navbar-transparent.navbar-white .navbar-brand {
-            top: -25px !important;
-        }
-    }
-
     @media (min-width: 991px) {
         .navbar-transparent:not(.navbar-white) .navbar-brand {
             top: 15px !important;
@@ -335,6 +325,16 @@
 
         .navbar-transparent.navbar-white .navbar-brand {
             top: 0px !important;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .navbar-transparent:not(.navbar-white) .navbar-brand {
+            top: -10px !important;
+        }
+
+        .navbar-transparent.navbar-white .navbar-brand {
+            top: -25px !important;
         }
     }
 </style>
