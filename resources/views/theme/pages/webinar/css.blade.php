@@ -311,7 +311,7 @@
 
     .navbar-brand{
         left: calc(50% - 47px) !important;
-        top: 0px !important;
+        top: 0px;
         position: absolute !important;
         width: 95px !important;
         text-align: center !important;
@@ -324,6 +324,9 @@
 
         .navbar-transparent.navbar-white .navbar-brand {
             top: -25px !important;
+        }
+        .navbar-brand{
+            top:-25px;
         }
     }
 
