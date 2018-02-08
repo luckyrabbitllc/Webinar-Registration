@@ -311,16 +311,24 @@
 
     .navbar-brand{
         left: calc(50% - 47px) !important;
+        top: 0px !important;
         position: absolute !important;
         width: 95px !important;
         display: block !important;
         text-align: center !important;
     }
 
-    @media (min-width: 991px) {
-        .navbar-brand {
-            top: 0px !important;
+    @media (max-width: 991px) {
+        .navbar-transparent:not(.navbar-white) .navbar-brand {
+            top: -10px !important;
         }
+
+        .navbar-transparent.navbar-white .navbar-brand {
+            top: -25px !important;
+        }
+    }
+
+    @media (min-width: 991px) {
         .navbar-transparent:not(.navbar-white) .navbar-brand {
             top: 15px !important;
         }
@@ -330,17 +338,8 @@
         }
     }
 
-    @media (max-width: 991px) {
-        .navbar-brand {
-            top: -25px !important;
-        }
-        .navbar-transparent:not(.navbar-white) .navbar-brand {
-            top: -10px !important;
-        }
-
-        .navbar-transparent.navbar-white .navbar-brand {
-            top: -25px !important;
-        }
+    #title, #subtitle {
+        margin:20px !important;
     }
 </style>
 

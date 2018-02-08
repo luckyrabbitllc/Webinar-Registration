@@ -1,5 +1,8 @@
 <script>
     $( document ).ready(function() {
+        $("#title").fadeIn();
+        $("#subtitle").fadeIn();
+        $("#emailFormContent").fadeIn();
         $(".navbar-collapse").remove();
         $(".navbar-toggler").remove();
     });
@@ -21,9 +24,9 @@
                         console.log('signup successful')
                     } else {
                         signupEvent('webcast signup failure', email, {webinar:'example', validation:'failed'});
-                console.log('validation failed');
-            }
-            })
+                        console.log('validation failed');
+                    }
+                })
             }
         },
         computed: {

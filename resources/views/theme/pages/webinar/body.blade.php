@@ -7,13 +7,13 @@
         <div class="container">
             <div class="content-center" id="headerText">
                 <h2 class="title"
-                    style="font-weight:600 !important;">{!! $page->markdown($page->content()->heading->headline) !!}</h2>
-                <h4 class="text-center">{!! $page->markdown($page->content()->heading->intro) !!}</h4>
+                    style="display:none;font-weight:600 !important;" id="title">{!! $page->markdown($page->content()->heading->headline) !!}</h2>
+                <h4 class="text-center" style="display:none;" id="subtitle">{!! $page->markdown($page->content()->heading->intro) !!}</h4>
                 <div id="emailSuccess" class="form-group" align="center" style="display:none;padding:15px;">
                     <div class="btn btn-round btn-neutral btn-lg" style="color:#222;box-shadow:0px 3px 3px rgba(0, 0, 0, 0.5);">You're signed up<span class="hiddenOnMobile"> for this webcast</span>.  &nbsp;<i style="color:#50d892;" class="fa fa-check"></i></div>
                 </div>
-                <div id="emailForm" class="form-group" align="center" style="padding:15px;">
-                    <div class="column is-12">
+                <div id="emailForm" class="form-group" align="center" style="height:100px;padding:15px;">
+                    <div class="column is-12" id="emailFormContent" style="display:none;">
                         <form @submit.prevent="submitForm" >
                             <div class="input-group" style="max-width:550px;" :class="{'input-group-valid': true, 'is-danger': errors.has('email'), 'is-success': errors.has('email') == false, 'is-touched': fields.email && fields.email.touched, 'is-untouched': fields.email !== null}">
                                 <input class="form-control" id="s" data-vv-delay="200" v-validate="'required|email'" :class="{'input': true, 'is-danger': errors.has('email') }" name="email" type="text" placeholder="Email Address" autocomplete="off">
@@ -147,40 +147,4 @@
             </div>
         </section>
     @endif
-</div>
-
-<div id="successModal" class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">You're all set!</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <p>
-                    Check your e-mail for instructions.
-                </p>
-                <?php /*
-                    <form>
-                        <div class="form-group">
-                            <label for="recipient-name" class="col-form-label">Recipient:</label>
-                            <input type="text" class="form-control" id="recipient-name">
-                        </div>
-                        <div class="form-group">
-                            <label for="message-text" class="col-form-label">Message:</label>
-                            <textarea class="form-control" id="message-text"></textarea>
-                        </div>
-                    </form>
-                */ ?>
-            </div>
-            <?php /*
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Send message</button>
-                </div>
-            */?>
-        </div>
-    </div>
 </div>
