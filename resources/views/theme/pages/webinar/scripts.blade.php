@@ -1,12 +1,12 @@
 <script>
     $( document ).ready(function() {
+        $(".navbar-brand").fadeIn();
         $(".page-header-image").fadeIn();
         $("#title").delay(250).fadeIn();
         $("#subtitle").delay(250).fadeIn();
         $("#emailFormContent").delay(250).fadeIn();
-        $(".navbar-brand").delay(100).fadeIn();
-        $("#content").delay(350).fadeIn();
-        $("#CTA").delay(450).fadeIn();
+        $("#content").delay(450).fadeIn();
+        $("#CTA").delay(550).fadeIn();
         $(".navbar-collapse").remove();
         $(".navbar-toggler").remove();
     });
