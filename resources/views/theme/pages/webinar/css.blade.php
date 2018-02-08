@@ -303,6 +303,7 @@
     }
 
     .input-group-valid.is-success.is-touched.is-untouched, #registerButton,
+    .input-group-valid.is-success.is-untouched, #registerButton,
     .input-group-valid.is-success.is-touched #registerButton{
         background:#50d892 !important;
         color:#fff !important;
