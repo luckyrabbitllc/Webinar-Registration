@@ -1,8 +1,10 @@
 <script>
     $( document ).ready(function() {
-        $("#title").fadeIn();
-        $("#subtitle").fadeIn();
-        $("#emailFormContent").fadeIn();
+        $(".page-header-image").fadeIn();
+        $("#title").delay(250).fadeIn();
+        $("#subtitle").delay(250).fadeIn();
+        $("#emailFormContent").delay(250).fadeIn();
+        $(".navbar-brand").delay(100).fadeIn();
         $(".navbar-collapse").remove();
         $(".navbar-toggler").remove();
     });

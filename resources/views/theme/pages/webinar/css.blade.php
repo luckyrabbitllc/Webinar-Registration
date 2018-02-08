@@ -314,7 +314,6 @@
         top: 0px !important;
         position: absolute !important;
         width: 95px !important;
-        display: block !important;
         text-align: center !important;
     }
 
@@ -340,6 +339,13 @@
 
     #title, #subtitle {
         margin:20px !important;
+    }
+
+    .page-header-image {
+        display:none;
+    }
+    .navbar-brand {
+        display:none
     }
 </style>
 
