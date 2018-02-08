@@ -312,7 +312,6 @@
     .navbar-brand{
         left: calc(50% - 47px) !important;
         top: 0px !important;
-        float: left !important;
         position: absolute !important;
         width: 95px !important;
         display: block !important;
