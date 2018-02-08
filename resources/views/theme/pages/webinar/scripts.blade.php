@@ -16,8 +16,11 @@
                         //$('#successModal').modal();
                         $('#emailForm').hide();
                         $('#emailSuccess').fadeIn();
+                        var email = $('#s').val();
+                        signupEvent(email, {webinar:'example'});
+                        console.log('signup successful')
                     } else {
-
+                        console.log('validation failed');
                     }
                 })
             }
@@ -28,4 +31,9 @@
             }
         }
     });
+
+    function signupEvent(email, data){
+        $.get('/api/analytics/event', { event_type:'webcast signup',  <?php if(\Auth::user()) { $user = \Auth::user(); echo "user_id:$user->id, user_name:'$user->name',"; } ?> user_email:email, data:data }, function(data) { });
+        return false; // prevent default
+    }
 </script>

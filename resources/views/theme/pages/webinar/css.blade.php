@@ -308,7 +308,7 @@
         background:#50d892 !important;
         color:#fff !important;
     }
-    
+
     .navbar-brand{
         left: calc(50% - 47px) !important;
         top: 0px !important;
