@@ -319,7 +319,7 @@
 
     @media (min-width: 991px) {
         .navbar-brand {
-            top: -25px !important;
+            top: 0px !important;
         }
         .navbar-transparent:not(.navbar-white) .navbar-brand {
             top: 15px !important;
@@ -332,7 +332,7 @@
 
     @media (max-width: 991px) {
         .navbar-brand {
-            top: 0px !important;
+            top: -25px !important;
         }
         .navbar-transparent:not(.navbar-white) .navbar-brand {
             top: -10px !important;
