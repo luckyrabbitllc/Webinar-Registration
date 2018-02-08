@@ -281,6 +281,12 @@
     .btn-success {
         background:#50d892 !important;
     }
+
+    span.help {
+        background: rgba(0,0,0,0.5);
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
 </style>
 
 <script src="https://unpkg.com/vee-validate@2.0.3/dist/vee-validate.js"></script>
