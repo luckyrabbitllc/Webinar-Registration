@@ -118,6 +118,10 @@
             padding-top: 15px;
         }
 
+        .page-header h2, .page-header h4 {
+            font-size:22px !important;
+        }
+
         .title {
             font-size: 33px;
             padding: 0px 15px;

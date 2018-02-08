@@ -10,7 +10,7 @@
                     style="font-weight:600 !important;">{!! $page->markdown($page->content()->heading->headline) !!}</h2>
                 <h4 class="text-center">{!! $page->markdown($page->content()->heading->intro) !!}</h4>
                 <div id="emailSuccess" class="form-group" align="center" style="display:none;padding:15px;">
-                    <div class="btn btn-round btn-neutral btn-lg" style="color:#222;box-shadow:0px 3px 3px rgba(0, 0, 0, 0.5);">You're signed up for this webcast. &nbsp;<i style="color:#50d892;" class="fa fa-check"></i></div>
+                    <div class="btn btn-round btn-neutral btn-lg" style="color:#222;box-shadow:0px 3px 3px rgba(0, 0, 0, 0.5);">You're signed up<span class="hiddenOnMobile"> for this webcast</span>.  &nbsp;<i style="color:#50d892;" class="fa fa-check"></i></div>
                 </div>
                 <div id="emailForm" class="form-group" align="center" style="padding:15px;">
                     <div class="column is-12">
