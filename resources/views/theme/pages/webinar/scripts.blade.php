@@ -1,6 +1,7 @@
 <script>
     $( document ).ready(function() {
         $(".navbar-collapse").remove();
+        $(".navbar-toggler").remove();
     });
 
     Vue.use(VeeValidate);
