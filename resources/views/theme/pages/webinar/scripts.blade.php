@@ -5,6 +5,8 @@
         $("#subtitle").delay(250).fadeIn();
         $("#emailFormContent").delay(250).fadeIn();
         $(".navbar-brand").delay(100).fadeIn();
+        $("#content").delay(350).fadeIn();
+        $("#CTA").delay(450).fadeIn();
         $(".navbar-collapse").remove();
         $(".navbar-toggler").remove();
     });

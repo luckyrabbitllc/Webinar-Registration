@@ -38,7 +38,7 @@
             <p style="font-size:25px;color:#fff;margin:0px;" id="alertMessage">{!! $page->markdown($page->content()->alert->message) !!}</p>
         </div>
     @endif
-    <div class="section text-center" style="background:none;padding-bottom:0px;">
+    <div id="content" class="section text-center" style="display:none;background:none;padding-bottom:0px;">
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
@@ -133,7 +133,7 @@
     </div>
 
     @if(isset($page->content()->call_to_action) && (isset($page->content()->call_to_action->headline) OR isset($page->content()->call_to_action->link) OR isset($page->content()->call_to_action->message)))
-        <section class="section text-center" style="background:none;color:#555;">
+        <section id="CTA" class="section text-center" style="display:none;background:none;color:#555;">
             <div class="container">
                 <div class="row align-items-center text-center">
                     <div class="col-lg-12 text-center">
