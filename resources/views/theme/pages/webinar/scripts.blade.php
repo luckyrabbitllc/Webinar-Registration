@@ -17,12 +17,13 @@
                         $('#emailForm').hide();
                         $('#emailSuccess').fadeIn();
                         var email = $('#s').val();
-                        signupEvent(email, {webinar:'example'});
+                        signupEvent('webcast signup', email, {webinar:'example'});
                         console.log('signup successful')
                     } else {
-                        console.log('validation failed');
-                    }
-                })
+                        signupEvent('webcast signup failure', email, {webinar:'example', validation:'failed'});
+                console.log('validation failed');
+            }
+            })
             }
         },
         computed: {
@@ -32,8 +33,8 @@
         }
     });
 
-    function signupEvent(email, data){
-        $.get('/api/analytics/event', { event_type:'webcast signup',  <?php if(\Auth::user()) { $user = \Auth::user(); echo "user_id:$user->id, user_name:'$user->name',"; } ?> user_email:email, data:data }, function(data) { });
+    function signupEvent(type, email, data){
+        $.get('/api/analytics/event', { event_type: type,  <?php if(\Auth::user()) { $user = \Auth::user(); echo "user_id:$user->id, user_name:'$user->name',"; } ?> user_email:email, data:data }, function(data) { });
         return false; // prevent default
     }
 </script>
