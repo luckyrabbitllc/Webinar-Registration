@@ -324,7 +324,7 @@
     }
 
     .navbar-transparent.navbar-white .navbar-brand {
-        top:0px !important;
+        top:-25px !important;
     }
 </style>
 
