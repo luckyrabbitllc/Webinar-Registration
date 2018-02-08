@@ -319,7 +319,11 @@
         text-align: center !important;
     }
 
-    .navbar-transparent .navbar-brand {
+    .navbar-transparent:not(.navbar-white) .navbar-brand {
+        top:15px !important;
+    }
+
+    .navbar-transparent.navbar-white .navbar-brand {
         top:0px !important;
     }
 </style>
